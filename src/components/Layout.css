@@ -1,0 +1,55 @@
+header {
+    height: 90px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background: #2B3844;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 48px;
+}
+
+.header-title{
+    color: #FFF;
+    font-family: 'Nunito Sans';
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.header-theme{
+    color: #FFF;
+    font-family: 'Nunito Sans';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.fa-moon{
+    width: 25px;
+    height: 25px;
+
+}
+
+.header-title-div{
+    width: 100%;
+}
+
+.header-theme-div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+
+
+
+
+
