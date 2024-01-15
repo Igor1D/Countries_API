@@ -1,8 +1,18 @@
 import React from "react";
+import { useThemeContext } from "../Utils/ThemeProvider";
 import "./Layout.css";
 
 
 function Layout({ children }) {
+
+  const { darkTheme, setDarkTheme } = useThemeContext();
+
+  function handleClick() {
+    setDarkTheme(!darkTheme);
+    console.log("clciked");
+  }
+
+
   return (
     <>
     <header>
@@ -11,7 +21,8 @@ function Layout({ children }) {
       </div>
       <div className="header-theme-div">
         {/* <img src="../assets/moon-solid.svg" alt="" className="fa-moon" /> */}
-        <p className="header-theme">Dark Mode</p>
+        <span className="header-theme" onClick={()=>{handleClick()}}> <img src="/public/moon_dark.svg" alt="moon_dark" className="moon-icon" /> Dark Mode</span>
+       
       </div>
     </header>
     {children}

@@ -43,9 +43,8 @@
     align-items: center;
     padding-left: 80px;
     padding-right: 80px;
-    /* border: 2px solid red; */
     gap: 48px;
-    color: white;
+    color: var(--primary-font-color);
 }
 
 .country-div {
@@ -56,10 +55,10 @@
     padding-right: 0;
     width: 350px;
     height: 350px;
-    background-color: #2b3844;
+    background-color: var(--secondary-color);
     border: 0px solid #969696;
     text-decoration: none;
-    color: white;
+    color: var(--primary-font-color);
 }
 .country-div img {
     display: flex;
@@ -84,3 +83,6 @@
     font-size: 20px;
   }
 
+.css-6hp17o-MuiList-root-MuiMenu-list{
+    background-color: var(--secondary-color);
+}

@@ -1,9 +1,26 @@
-body {
+
+:root{
+    --primary-color: #202C36;
+    --secondary-color: #2B3844;
+    --primary-font-color: white;
+
+  }
+  
+  .light-theme {
+    --primary-color: #FAFAFA;
+    --secondary-color: #FFFFFF;
+    --primary-font-color: #111517;
+
+
+  }
+
+  body, #root, .app-component {
     padding: 0;
+    font-family: 'Nunito Sans';
     margin: 0;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #202C36;
+    background-color: var( --primary-color);
     width: 100%;
 }

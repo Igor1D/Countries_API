@@ -4,10 +4,18 @@ import Layout from './components/Layout'
 import NotFound from './components/NotFound'
 import './App.css'
 import { Route, Routes } from 'react-router-dom';
+import { useThemeContext } from './Utils/ThemeProvider'
+
+
 
 function App() {
+  const {darkTheme, setDarkTheme} = useThemeContext()
+  console.log(darkTheme)
+
+ 
   
   return (
+    <div className= {darkTheme ? "app-component" : "app-component light-theme"}>
     <>
       <Layout >
         <Routes>
@@ -17,6 +25,7 @@ function App() {
         </Routes>
       </Layout>
     </>
+    </div>
   )
 }
 

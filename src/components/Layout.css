@@ -5,14 +5,14 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background: #2B3844;
+    background: var(--secondary-color);
     padding-left: 80px;
     padding-right: 80px;
     margin-bottom: 48px;
 }
 
 .header-title{
-    color: #FFF;
+    color: var(--primary-font-color);
     font-family: 'Nunito Sans';
     font-size: 28px;
     font-style: normal;
@@ -21,11 +21,11 @@ header {
 }
 
 .header-theme{
-    color: #FFF;
+    color: var(--primary-font-color);
     font-family: 'Nunito Sans';
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: normal;
 }
 
@@ -45,6 +45,15 @@ header {
     justify-content: space-between;
     justify-content: flex-end;
     align-items: center;
+    cursor: pointer;
+
+}
+
+.moon-icon {
+    width: 12px;
+    margin-right: 5px;
+    padding: 0;
+    filter: invert(1);
 
 }
 

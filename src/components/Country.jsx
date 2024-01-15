@@ -1,48 +1,38 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import ButtonBase from "@mui/material/ButtonBase";
-import IconButton from "@mui/material/IconButton";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { UseCountriesContext } from "../Utils/CountriesContextProvider";
 import { useNavigate } from "react-router-dom";
 import "./Country.css";
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 function Country() {
   const { countries, setCountries } = UseCountriesContext();
 
   let { cca3 } = useParams();
-  console.log(cca3)
+  console.log(cca3);
 
   function formatNumber(number) {
     return Intl.NumberFormat("en-US").format(number);
   }
 
+  let filteredCountry = countries.filter(
+    (country) => country.cca3 == cca3.toUpperCase()
+  )[0];
 
+  let currencies = [];
+  let languages = [];
 
-
-let filteredCountry = countries.filter((country) => country.cca3 == cca3.toUpperCase())[0];
-
-
-
-let currencies = []
-let languages = []
-   
   if (filteredCountry) {
     for (let key in filteredCountry.currencies) {
-      currencies.push(filteredCountry.currencies[key].name)
+      currencies.push(filteredCountry.currencies[key].name);
     }
     for (let key in filteredCountry.languages) {
-      languages.push(filteredCountry.languages[key])
+      languages.push(filteredCountry.languages[key]);
     }
   }
-
- 
- 
-
-
 
   const navigate = useNavigate();
 
@@ -51,10 +41,8 @@ let languages = []
   };
 
   console.log(filteredCountry);
+  console.log(countries)
 
-useEffect(()=>{
-
-}, [])
 
   return (
     <>
@@ -91,26 +79,37 @@ useEffect(()=>{
                 <div className="right-info-column">
                   <ul>
                     <li>Top Level Domain: {filteredCountry.tld}</li>
-                    <li>Currencies: {currencies.map((currency)=> <span key={currency}> {currency} </span> )}</li>
-                    <li>Languages: {languages.map((language)=> <span key={language}> {language} </span> )}</li>
+                    <li>
+                      Currencies:{" "}
+                      {currencies.map((currency) => (
+                        <span key={currency}> {currency} </span>
+                      ))}
+                    </li>
+                    <li>
+                      Languages:{" "}
+                      {languages.map((language) => (
+                        <span key={language}> {language} </span>
+                      ))}
+                    </li>
                   </ul>
                 </div>
               </div>
 
               {/* <p className="border-countries">Border Countries: {filteredCountry.borders.join(', ')}</p> */}
-              { filteredCountry.borders ? <p className="border-countries">
-                Border Countries:{" "}
-               {filteredCountry.borders.map((borderCountry) => (
-                  // <Button
-                  //   variant="contained"
-                  //   style={{ marginRight: '10px',backgroundColor: "#2B3844", color: "white" }}
-                  //   key={borderCountry}
-
-                  // > 
-                  <Link to={`/country/${borderCountry}`} className="border-country" style={{ marginRight: '10px',backgroundColor: "#2B3844", color: "white" }}>{borderCountry} </Link>
-                  // </Button>
-                ))} 
-              </p> : null}
+              {filteredCountry.borders ? (
+                <p className="border-countries">
+                  Border Countries:{" "}
+                  {filteredCountry.borders.map((borderCountry) => (
+                    <Link
+                      to={`/country/${borderCountry}`}
+                      key={borderCountry}
+                      className="border-country"
+                    >
+                      {borderCountry}
+                    </Link>
+                  ))}
+                </p>
+              ) : null}
             </div>
           </div>
         </div>
@@ -120,4 +119,3 @@ useEffect(()=>{
 }
 
 export default Country;
-

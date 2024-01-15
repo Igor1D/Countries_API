@@ -1,6 +1,6 @@
 .container {
     font-family: Nunito Sans;
-    color: #FFF;
+    color: var(--primary-font-color);
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -62,7 +62,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    color: #FFF;
+    color: var(--primary-font-color);
     font-style: normal;
     font-weight: 300;
     
@@ -90,12 +90,17 @@
 
 
   .MuiButton-outlined {
-    border-color: #2B3844 !important;
+    border-color: var(--secondary-color) !important;
     width: 120px;
 
   }
 
   .border-country {
     text-decoration: none;
-    color: white;
+    color: var(--primary-font-color);
+    background-color: var(--secondary-color);
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
   }
