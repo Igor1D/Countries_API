@@ -51,7 +51,7 @@ function Country() {
           <div className="back-button">
             <Button
               variant="outlined"
-              style={{ backgroundColor: "#2B3844", color: "white" }}
+              style={{ backgroundColor: "var(--secondary-color)", color: "var(--primary-font-color)" }}
               onClick={handleClick}
               startIcon={<ArrowBackIcon />}
             >

@@ -3,6 +3,7 @@
     --primary-color: #202C36;
     --secondary-color: #2B3844;
     --primary-font-color: white;
+    --primary-select-ddl-color:#2B3844;
 
   }
   
@@ -10,6 +11,7 @@
     --primary-color: #FAFAFA;
     --secondary-color: #FFFFFF;
     --primary-font-color: #111517;
+    --primary-select-ddl-color:#c80b0b;
 
 
   }

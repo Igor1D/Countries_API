@@ -83,6 +83,6 @@
     font-size: 20px;
   }
 
-.css-6hp17o-MuiList-root-MuiMenu-list{
-    background-color: var(--secondary-color);
-}
+/* .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    background-color: var(--secondary-color) !important;
+  } */

@@ -9,6 +9,7 @@ import {
   TextField,
 } from "@mui/material";
 import { Link } from 'react-router-dom';
+import { InputBase } from '@mui/material';
 
 
 import "./Home.css";
@@ -51,11 +52,11 @@ function Home() {
             className="search-text-field-comp"
             InputProps={{
               style: {
-                color: "white",
-                backgroundColor: "#2B3844",
+                color: "var(--primary-font-color)",
+                backgroundColor: "var(--secondary-color)",
               },
             }}
-            InputLabelProps={{ style: { color: "white" } }}
+            InputLabelProps={{ style: { color: "var(--primary-font-color)" } }}
             id="outlined-basic"
             variant="outlined"
             label="Search for a country..."
@@ -66,12 +67,22 @@ function Home() {
           <FormControl className="filter-form-comp">
             <InputLabel
               id="demo-simple-select-label"
-              style={{ color: "white" }}
+              style={{ color: "var(--primary-font-color)" }}
             >
               Filter By Region
             </InputLabel>
             <Select
-              style={{ backgroundColor: "#2B3844", color: "white" }}
+              style={{
+                backgroundColor: "var(--secondary-color)",
+                color: "var(--primary-font-color)",
+              }}
+              sx={{
+                "& .MuiPopover-paper":{
+                  backgroundColor: "black",
+                  color: "black"
+                }
+              }}
+              
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={select}
