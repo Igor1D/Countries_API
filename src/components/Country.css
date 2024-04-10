@@ -1,5 +1,5 @@
 .container {
-    font-family: Nunito Sans;
+  font-family: Nunito Sans, sans-serif;
     color: var(--primary-font-color);
     margin-top: 100px;
     display: flex;
@@ -58,15 +58,15 @@
     /* height: 100%; */
   }
   
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    color: var(--primary-font-color);
-    font-style: normal;
-    font-weight: 300;
-    
-  }
+  /*ul {*/
+  /*  list-style: none;*/
+  /*  padding: 0;*/
+  /*  margin: 0;*/
+  /*  color: var(--primary-font-color);*/
+  /*  font-style: normal;*/
+  /*  font-weight: 300;*/
+  /*  */
+  /*}*/
   
   li {
 
@@ -104,3 +104,32 @@
     border-radius: 5px;
     font-size: 16px;
   }
+
+
+@media screen and (max-width: 400px) {
+  .container {
+    /* Padding and margins are already set for mobile in the base styles */
+  }
+
+  .back-button {
+    /* Centering the back button is handled in the base styles */
+  }
+
+  .flag-container {
+    /* The flag image width is set to 100% in the base styles */
+  }
+
+  .info-container {
+    /* The container for country info is already styled for mobile */
+  }
+
+  h2, li {
+    /* Font sizes and text alignment for h2 and li are handled in the base styles */
+  }
+
+  .border-countries, .border-country {
+    /* The border countries and individual country buttons are styled for mobile */
+  }
+
+  /* Add any other mobile-specific styles here if needed */
+}

@@ -18,10 +18,11 @@
 
 }
 
+
 .filter-div{
     display: flex;
     width: 100%;
-    /* border: 2px solid yellow; */
+     /*border: 2px solid yellow;*/
     justify-content: flex-end 
 }
 
@@ -83,6 +84,85 @@
     font-size: 20px;
   }
 
-/* .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
-    background-color: var(--secondary-color) !important;
-  } */
+ul {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+}
+
+
+/* For tablets (assuming 768px is a breakpoint for tablet devices) */
+@media screen and (max-width: 768px) {
+    .search-filter-div {
+        flex-direction: column-reverse;
+        padding-left: 40px; /* Reduced padding */
+        padding-right: 40px;
+        justify-content: center
+
+    }
+
+    .search-div, .filter-div {
+        /*width: auto;*/
+        justify-content: center; /* Center the search and filter bars */
+    }
+
+    .css-lbxfq7-MuiFormControl-root {
+        width: 100% !important;
+        color: black !important;
+    }
+
+    .search-text-field-comp, .filter-form-comp {
+        width: 100%; /* Full width for better use of space */
+    }
+
+    .main-content {
+        padding-left: 40px;
+        padding-right: 40px;
+        gap: 24px; /* Reduced gap */
+    }
+
+    .country-div {
+        width: 100%; /* Full width for better use of space */
+        height: auto; /* Height auto to accommodate content */
+    }
+
+    .country-div img {
+        max-width: 100%; /* Full width of the container */
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 400px) {
+    .search-filter-div {
+        padding-left: 20px; /* Even smaller padding for mobile */
+        padding-right: 20px;
+        margin-bottom: 24px; /* Reduced margin */
+        gap: 20px;
+    }
+
+
+    .main-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 16px; /* Even smaller gap */
+    }
+
+    .country-div {
+        width: 100%; /* Ensure it takes the full width */
+    }
+
+    /* Since mobile devices have less space, the font size and padding can be reduced */
+    .country-div h2 {
+        padding-left: 16px;
+        font-size: 18px; /* Slightly smaller font size */
+        padding-top: 0;
+    }
+
+    .country-div {
+        padding-bottom: 15px;
+    }
+
+    .country-div p {
+        padding-left: 16px;
+        font-size: 14px; /* Slightly smaller font size */
+    }
+}

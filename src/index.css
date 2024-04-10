@@ -2,8 +2,7 @@
 :root{
     --primary-color: #202C36;
     --secondary-color: #2B3844;
-    --primary-font-color: white;
-    --primary-select-ddl-color:#2B3844;
+    --primary-font-color: #FFFFFF;
 
   }
   
@@ -11,14 +10,13 @@
     --primary-color: #FAFAFA;
     --secondary-color: #FFFFFF;
     --primary-font-color: #111517;
-    --primary-select-ddl-color:#c80b0b;
 
 
   }
 
   body, #root, .app-component {
     padding: 0;
-    font-family: 'Nunito Sans';
+    font-family: 'Nunito Sans', sans-serif;
     margin: 0;
     display: flex;
     min-height: 100vh;

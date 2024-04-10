@@ -13,7 +13,7 @@ header {
 
 .header-title{
     color: var(--primary-font-color);
-    font-family: 'Nunito Sans';
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 28px;
     font-style: normal;
     font-weight: 800;
@@ -22,7 +22,7 @@ header {
 
 .header-theme{
     color: var(--primary-font-color);
-    font-family: 'Nunito Sans';
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
@@ -42,7 +42,6 @@ header {
 .header-theme-div{
     display: flex;
     width: 100%;
-    justify-content: space-between;
     justify-content: flex-end;
     align-items: center;
     cursor: pointer;
@@ -55,6 +54,18 @@ header {
     padding: 0;
     filter: invert(1);
 
+}
+
+
+@media screen and (max-width: 400px) {
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header-title {
+        font-size: 18px;
+    }
 }
 
 

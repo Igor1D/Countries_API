@@ -10,8 +10,6 @@ import {
 } from "@mui/material";
 import { Link } from 'react-router-dom';
 import { InputBase } from '@mui/material';
-
-
 import "./Home.css";
 
 function Home() {
@@ -22,13 +20,13 @@ function Home() {
 
   let homeCountries;
 
-  if (select == 'AllRegions') {
+  if (select === 'AllRegions') {
     homeCountries = countries
     homeCountries = countries.filter((country)=>country.name.common.toLowerCase().includes(search.toLowerCase()))
     
   } else {
 
-    homeCountries = countries.filter((country)=>country.name.common.toLowerCase().includes(search.toLowerCase()) && country.region == select)
+    homeCountries = countries.filter((country)=>country.name.common.toLowerCase().includes(search.toLowerCase()) && country.region === select)
   }
 
 
@@ -64,32 +62,26 @@ function Home() {
         </div>
 
         <div className="filter-div">
-          <FormControl className="filter-form-comp">
+          <FormControl className="filter-form-comp" sx={{ display:"flex", width: "50%" }}>
             <InputLabel
               id="demo-simple-select-label"
-              style={{ color: "var(--primary-font-color)" }}
+              sx={{ color: "var(--primary-font-color)" }}
             >
               Filter By Region
             </InputLabel>
             <Select
-              style={{
+              sx={{
                 backgroundColor: "var(--secondary-color)",
                 color: "var(--primary-font-color)",
-              }}
-              sx={{
-                "& .MuiPopover-paper":{
-                  backgroundColor: "black",
-                  color: "black"
-                }
-              }}
-              
+
+              }
+
+              }
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={select}
               onChange={(e)=>{setSelect(e.target.value)}}
               label="Filter By Region"
-
-              // onChange={handleChange}
             >
               <MenuItem value={"AllRegions"}>All Regions</MenuItem>
               <MenuItem value={"Africa"}>Africa</MenuItem>
