@@ -84,6 +84,8 @@
     font-size: 20px;
   }
 
+
+
 ul {
     background-color: var(--primary-color);
     color: var(--primary-font-color);
@@ -146,23 +148,32 @@ ul {
         gap: 16px; /* Even smaller gap */
     }
 
-    .country-div {
-        width: 100%; /* Ensure it takes the full width */
+    .h2 {
+        padding-top: 20px;
+        padding-left: 16px !important;
+
     }
+
+
+    .country-div {
+        padding-bottom: 10px;
+    }
+
+
 
     /* Since mobile devices have less space, the font size and padding can be reduced */
     .country-div h2 {
         padding-left: 16px;
+        padding-top: 20px;
         font-size: 18px; /* Slightly smaller font size */
-        padding-top: 0;
-    }
-
-    .country-div {
-        padding-bottom: 15px;
+        width: 100%;
+        gap: 0;
+        padding-bottom: 5px;
     }
 
     .country-div p {
         padding-left: 16px;
         font-size: 14px; /* Slightly smaller font size */
+
     }
 }
