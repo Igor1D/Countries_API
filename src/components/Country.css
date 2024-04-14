@@ -159,18 +159,14 @@
     margin: 0;
   }
 
-  h2, li {
-    /* Font sizes and text alignment for h2 and li are handled in the base styles */
-  }
-
-  .border-countries, .border-country {
-    /* The border countries and individual country buttons are styled for mobile */
-  }
   .border-countries {
     flex-wrap: wrap;
     display: flex;
     gap: 5px;
     align-items: center;
   }
-  /* Add any other mobile-specific styles here if needed */
+
+  .css-i016t1 {
+    width: 100% !important;
+  }
 }
