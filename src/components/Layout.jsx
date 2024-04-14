@@ -21,7 +21,7 @@ function Layout({ children }) {
       </div>
       <div className="header-theme-div">
         {/* <img src="../assets/moon-solid.svg" alt="" className="fa-moon" /> */}
-        <span className="header-theme" onClick={()=>{handleClick()}}> <img src="/public/moon_dark.svg" alt="moon_dark" className="moon-icon" /> Dark Mode</span>
+        <span className="header-theme" onClick={()=>{handleClick()}}> <img src="/moon_dark.svg" alt="moon_dark" className="moon-icon" /> Dark Mode</span>
        
       </div>
     </header>
